@@ -9,7 +9,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ".:/home/jovan"
+      - ".:/home/jovyan"
     container_name: jupyter
     environment:
       JUPYTER_ENABLE_LAB: "yes"
