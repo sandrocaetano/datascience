@@ -2,3 +2,4 @@ jupyter-notebook/.config
 jupyter-notebook/.local
 jupyter-notebook/.rstudio
 .Rhistory
+.bash_history
