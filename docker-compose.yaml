@@ -1,0 +1,26 @@
+version: "3.9"
+   
+services:
+  jupyter:
+    image: 'jupyter_octave:latest'
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ".:/home/jovyan"
+    container_name: jupyter
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    command: "start-notebook.sh --NotebookApp.token='1234567890zaqxswcdevfr' --NotebookApp.password=''"
+  rstudio:
+    environment:
+      - USER=rstudio
+      - PASSWORD=rstudio
+    image: "rocker/tidyverse:latest"
+    volumes:
+      - .:/home/maxence
+    container_name: rstudio
+    ports:
+      - 8787:8787
