@@ -14,4 +14,4 @@ ENV PATH="/home/myuser/.local/bin:${PATH}"
 
 EXPOSE 8057
 
-CMD ["python3", "callback_app3.py"]
+CMD ["python3", "callbacks_em_cadeia.py"]

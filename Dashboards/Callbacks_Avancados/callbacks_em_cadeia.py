@@ -5,13 +5,13 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 all_options = {
-    'America': ['New York City', 'San Francisco', 'Cincinnati'],
+    'USA': ['New York City', 'San Francisco', 'Cincinnati'],
     'Canada': [u'Montréal', 'Toronto', 'Ottawa']
 }
 app.layout = html.Div([
     dcc.RadioItems(
         list(all_options.keys()),
-        'America',
+        'USA',
         id='countries-radio',
     ),
 
@@ -50,4 +50,4 @@ def set_display_children(selected_country, selected_city):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=8057)
