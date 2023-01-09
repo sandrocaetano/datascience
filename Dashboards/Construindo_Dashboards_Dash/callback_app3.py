@@ -1,6 +1,6 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import html
+from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
@@ -88,4 +88,4 @@ def update_graph(xaxis_column_name, yaxis_column_name,
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051)
+    app.run_server(debug=True, host='0.0.0.0', port=8056)

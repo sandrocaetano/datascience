@@ -1,6 +1,6 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import html
+from dash import dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
@@ -41,4 +41,4 @@ def update_figure(selected_year):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=8055)
