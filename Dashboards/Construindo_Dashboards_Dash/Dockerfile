@@ -12,6 +12,6 @@ RUN pip install --user -r requirements.txt
 
 ENV PATH="/home/myuser/.local/bin:${PATH}"
 
-EXPOSE 8051
+EXPOSE 8053
 
-CMD ["python3", "layout_app1.py"]
+CMD ["python3", "layout_app3.py"]
