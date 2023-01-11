@@ -8,3 +8,4 @@ jupyter-notebook/.rstudio
 .jupyter
 .ipython/*
 .ipynb_checkpoints/*
+.local
