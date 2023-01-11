@@ -6,4 +6,5 @@ jupyter-notebook/.rstudio
 .cache
 .config
 .jupyter
-.ipython
+.ipython/*
+.ipynb_checkpoints/*
