@@ -22,7 +22,7 @@ app.layout = dbc.Container(children=[
                 dbc.Col([
                     dbc.Card(
                         [
-                            html.H2("ASIMOV", style={'font-family': 'Voltaire', 'font-size': '60px'}),
+                            html.H2("SpyderLabs", style={'font-family': 'Voltaire', 'font-size': '60px'}),
                             html.Hr(), 
                             html.P("Dashboard para análise de de vendas de supermercado."),
 
@@ -94,4 +94,4 @@ def render_page_content(cities, main_variable):
 
 
 if __name__ == "__main__":
-    app.run_server(port=8050, host='0.0.0.0', debug=True)
+    app.run_server(port=8061, host='0.0.0.0', debug=True)

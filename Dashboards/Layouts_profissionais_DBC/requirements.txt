@@ -1,0 +1,6 @@
+plotly
+dash
+ipywidgets
+pandas
+dash-bootstrap-components
+dash-bootstrap-templates
