@@ -45,9 +45,9 @@ def render_graphs(cities, main_variable):
     operation = np.sum if main_variable == 'gross income' else np.mean
 
     df_filtered = df_data[df_data['City'].isin(cities)]
-    df_city = df_filtered.groupby['City'][main_variable].apply(operation).to_frame().reset_index()
-    df_payment = df_filtered.groupby['Payment'][main_variable].apply(operation).to_frame().reset_index()
-    df_product_income = df_filtered.groupby['Product line','City'][main_variable].apply(operation).to_frame().reset_index()
+    df_city = df_filtered.groupby('City')[main_variable].apply(operation).to_frame().reset_index()
+    df_payment = df_filtered.groupby('Payment')[main_variable].apply(operation).to_frame().reset_index()
+    df_product_income = df_filtered.groupby(['Product line','City'])[main_variable].apply(operation).to_frame().reset_index()
      
     fig_city = px.bar(df_city, x='City', y=main_variable)
     fig_payment = px.bar(df_payment, y='Payment', x=main_variable, orientation='h')
