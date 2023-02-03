@@ -12,6 +12,6 @@ RUN pip install --user -r requirements.txt
 
 ENV PATH="/home/myuser/.local/bin:${PATH}"
 
-EXPOSE 8058
+EXPOSE 8060
 
-CMD ["python3", "variaveis_globais.py"]
+CMD ["python3", "index.py"]
